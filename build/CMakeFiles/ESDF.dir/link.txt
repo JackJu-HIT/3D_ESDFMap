@@ -1,0 +1,2 @@
+/usr/bin/ar qc libESDF.a  CMakeFiles/ESDF.dir/src/parameters.cpp.o CMakeFiles/ESDF.dir/src/ESDFMap.cpp.o
+/usr/bin/ranlib libESDF.a

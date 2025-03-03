@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17  -O3 -Wall -pthread -O3 -DNDEBUG  -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main  libESDF.a 
