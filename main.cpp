@@ -43,9 +43,6 @@ int main() {
     // 假设最近障碍物的位置
     Eigen::Vector3d obstacle_pos(5.0, 5.0, 5.0);
 
-     // 将障碍物位置设置为占据
-    esdf_map.SetOccupancy(unoccupied_pos, 0);
-
 
     // 将障碍物位置设置为占据
     esdf_map.SetOccupancy(obstacle_pos, 1);
@@ -78,16 +75,15 @@ int main() {
     int unoccupied_pos_res = esdf_map.GetOccupancy(unoccupied_pos);
 
     // 输出结果
-    std::cout << "未占据元素位置: (" << unoccupied_pos(0) << ", " << unoccupied_pos(1) << ", " << unoccupied_pos(2) << ")" << unoccupied_pos_res << std::endl;
-    std::cout << "最近障碍物位置: (" << obstacle_pos(0) << ", " << obstacle_pos(1) << ", " << obstacle_pos(2) << ")" << "occupancy =" << occupancy << std::endl;
+    std::cout << "未占据元素位置: (" << unoccupied_pos(0) << ", " << unoccupied_pos(1) << ", " << unoccupied_pos(2) << ")" << " 占据状态:"<< unoccupied_pos_res << std::endl;
+    std::cout << "最近障碍物位置: (" << obstacle_pos(0) << ", " << obstacle_pos(1) << ", " << obstacle_pos(2) << ")" << " 占据状态:" << occupancy << std::endl;
     std::cout << "计算得到的距离: " << distance << std::endl;
      std::cout << "查询点距离: " << distance << " (理论值: " 
                << (unoccupied_pos - obstacle_pos).norm() << ")\n";
 
 
 
-
-    // 将障碍物位置设置为占据
+    // 将障碍物位置取消为未占据
     esdf_map.SetOccupancy(obstacle_pos, 0);
     //Eigen::Vector3d min_pos, Eigen::Vector3d max_pos
      esdf_map.SetUpdateRange(origin,map_size);
@@ -106,8 +102,8 @@ int main() {
     unoccupied_pos_res = esdf_map.GetOccupancy(unoccupied_pos);
 
     // 输出结果
-    std::cout << "未占据元素位置: (" << unoccupied_pos(0) << ", " << unoccupied_pos(1) << ", " << unoccupied_pos(2) << ")" << unoccupied_pos_res << std::endl;
-    std::cout << "最近障碍物位置: (" << obstacle_pos(0) << ", " << obstacle_pos(1) << ", " << obstacle_pos(2) << ")" << "occupancy =" << occupancy << std::endl;
+    std::cout << "未占据元素位置: (" << unoccupied_pos(0) << ", " << unoccupied_pos(1) << ", " << unoccupied_pos(2) << ")" << " 占据状态:"<< unoccupied_pos_res << std::endl;
+    std::cout << "最近障碍物位置: (" << obstacle_pos(0) << ", " << obstacle_pos(1) << ", " << obstacle_pos(2) << ")" << " 占据状态:" << occupancy << std::endl;
     std::cout << "计算得到的距离: " << distance << std::endl;
      std::cout << "查询点距离: " << distance << " (理论值: " 
                << (unoccupied_pos - obstacle_pos).norm() << ")\n";
