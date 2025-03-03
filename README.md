@@ -1,3 +1,13 @@
+# 此代码将ROS相关接口去掉
+使用main函数调用ESDFMap
+
+#使用方法
+ cd build
+ cmake ..
+ make
+ ./main
+ 
+
 # Fiesta
 > Incremental ESDF Map for motion planning
 
