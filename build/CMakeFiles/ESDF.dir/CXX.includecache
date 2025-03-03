@@ -26,11 +26,15 @@ parameters.h
 Eigen/Eigen
 -
 
-/home/juchunyu/20231013/05map/FIESTA-master/src/ESDFMap.cpp
+/home/juchunyu/20231013/05map/3D_ESDFMap/src/ESDFMap.cpp
 ESDFMap.h
-/home/juchunyu/20231013/05map/FIESTA-master/src/ESDFMap.h
+/home/juchunyu/20231013/05map/3D_ESDFMap/src/ESDFMap.h
 math.h
 -
 time.h
 -
+
+/home/juchunyu/20231013/05map/3D_ESDFMap/src/parameters.cpp
+parameters.h
+/home/juchunyu/20231013/05map/3D_ESDFMap/src/parameters.h
 
